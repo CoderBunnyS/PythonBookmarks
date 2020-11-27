@@ -1,13 +1,13 @@
 To start - 
 
-Installing - 
-run:
+Installing -  
+run:  
 pipenv install peewee psycopg2-binary autopep8
 
-run:
+run:  
 pipenv shell
 
-run: 
+run:   
 python3 main.py
 
 User choices:
