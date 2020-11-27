@@ -32,7 +32,7 @@ StackOverflow = Bookmark(name='stack overflow', link='https://stackoverflow.com/
 #Main menu function lists user options
 def main_menu():
     print('\nWelcome to your web developer help bookmark library!\nCreate a list of websites that will help you learn to be a better developer\nChoose number of the option you would like: \n 1. Create a new bookmark \n 2. List all bookmarks \n 3. Find a bookmark \n\nPress any key to quit')
-    option = str(input('\nWhat would you like to do?: '))
+    option = input('\nWhat would you like to do?: ')
     if option == '1':
         add_bookmark()
     elif option == '2':
@@ -50,14 +50,13 @@ def add_bookmark():
     new_link = input('Enter the link to the bookmarked site: \n')
 
     add_bookmark = Bookmark(name=add_bookmark, link=new_link, entered_date=datetime.datetime.now()).save()
-
     find_bookmark = Bookmark.select().where(Bookmark.name == add_bookmark)
 
-    print('\nBookmark successfully entered!\n')
+    print('\nBookmark created successfully!\n')
 
     for bookmark in find_bookmark:
         print(f'\nName: {bookmark.name} \n Link: {bookmark.link} \n Date Entered: {bookmark.entered_date}\n')
-        print('\n----------------\n')
+        
 
     main_menu()
 
