@@ -1,15 +1,18 @@
 To start - 
 
-Installing
+Installing - 
+run:
 pipenv install peewee psycopg2-binary autopep8
 
+run:
 pipenv shell
 
-run python3 main.py
+run: 
+python3 main.py
 
-Choices are:
+User choices:
 
-Create new bookmark - Press 1 to create a new bookmark
+Create a new bookmark - Press 1 to create a new bookmark
 
 List all bookmarks - Press 2 to view all bookmarks
 
